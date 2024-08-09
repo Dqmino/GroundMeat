@@ -75,8 +75,9 @@ public class ClickRecorder implements Recorder<ClickRecording> {
                 Random random = new Random();
                 if (random.nextBoolean() || random.nextBoolean() || random.nextBoolean() || random.nextBoolean()) {
                     // 0.94 chance
-                    recording.clickQueue().add(new ClickHistory(System.currentTimeMillis() + 44 - lastClick[0], button));
-                    lastClick[0] = System.currentTimeMillis() + 43;
+                    int xyz = random.nextInt(34, 69);
+                    recording.clickQueue().add(new ClickHistory(System.currentTimeMillis() + xyz - lastClick[0], button));
+                    lastClick[0] = System.currentTimeMillis() + xyz;
                 }
             }
 
